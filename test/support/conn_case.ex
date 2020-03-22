@@ -1,4 +1,4 @@
-defmodule ElixirBoilerplateWeb.ConnCase do
+defmodule QuarantineCodeWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -16,15 +16,15 @@ defmodule ElixirBoilerplateWeb.ConnCase do
   use ExUnit.CaseTemplate
 
   alias Ecto.Adapters.SQL.Sandbox
-  alias ElixirBoilerplate.Repo
-  alias ElixirBoilerplateWeb.Endpoint
+  alias QuarantineCode.Repo
+  alias QuarantineCodeWeb.Endpoint
   alias Phoenix.ConnTest
 
   using do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import ElixirBoilerplateWeb.Router.Helpers
+      import QuarantineCodeWeb.Router.Helpers
 
       # The default endpoint for testing
       @endpoint Endpoint

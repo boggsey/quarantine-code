@@ -1,9 +1,9 @@
-defmodule ElixirBoilerplate.Mixfile do
+defmodule QuarantineCode.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :elixir_boilerplate,
+      app: :quarantine_code,
       version: "0.0.1",
       elixir: "~> 1.10",
       erlang: "~> 22.2",
@@ -22,7 +22,7 @@ defmodule ElixirBoilerplate.Mixfile do
 
   def application do
     [
-      mod: {ElixirBoilerplate.Application, []},
+      mod: {QuarantineCode.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -94,9 +94,9 @@ defmodule ElixirBoilerplate.Mixfile do
 
   defp releases do
     [
-      elixir_boilerplate: [
-        version: {:from_app, :elixir_boilerplate},
-        applications: [elixir_boilerplate: :permanent],
+      quarantine_code: [
+        version: {:from_app, :quarantine_code},
+        applications: [quarantine_code: :permanent],
         include_executables_for: [:unix],
         steps: [:assemble, :tar]
       ]

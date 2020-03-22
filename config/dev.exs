@@ -3,7 +3,7 @@ import Config
 # Import runtime configuration
 import_config "releases.exs"
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
+config :quarantine_code, QuarantineCodeWeb.Endpoint,
   code_reloader: true,
   check_origin: false,
   watchers: [
@@ -17,11 +17,11 @@ config :elixir_boilerplate, ElixirBoilerplateWeb.Endpoint,
     patterns: [
       ~r{priv/gettext/.*$},
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-      ~r{lib/elixir_boilerplate_web/.*(ee?x)$}
+      ~r{lib/quarantine_code_web/.*(ee?x)$}
     ]
   ]
 
-config :elixir_boilerplate, ElixirBoilerplateWeb.ContentSecurityPolicy, allow_unsafe_scripts: true
+config :quarantine_code, QuarantineCodeWeb.ContentSecurityPolicy, allow_unsafe_scripts: true
 
 config :logger, :console, format: "[$level] $message\n"
 

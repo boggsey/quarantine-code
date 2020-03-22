@@ -77,7 +77,7 @@ RUN apk update --no-cache && \
     apk upgrade --no-cache && \
     apk add --no-cache bash openssl-dev erlang-crypto
 
-WORKDIR /opt/elixir_boilerplate
+WORKDIR /opt/quarantine_code
 
 # Copy the OTP binary from the build step
 COPY --from=otp-builder /build/_build/prod/${APP_NAME}-${APP_VERSION}.tar.gz .
@@ -89,9 +89,9 @@ COPY priv/scripts/docker-entrypoint.sh /usr/local/bin
 RUN chmod a+x /usr/local/bin/docker-entrypoint.sh
 
 # Create non-root user
-RUN adduser -D elixir_boilerplate && \ 
-    chown -R elixir_boilerplate: /opt/elixir_boilerplate
-USER elixir_boilerplate
+RUN adduser -D quarantine_code && \ 
+    chown -R quarantine_code: /opt/quarantine_code
+USER quarantine_code
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["start"]

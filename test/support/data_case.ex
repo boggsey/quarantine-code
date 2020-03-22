@@ -1,4 +1,4 @@
-defmodule ElixirBoilerplate.DataCase do
+defmodule QuarantineCode.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,16 +16,16 @@ defmodule ElixirBoilerplate.DataCase do
 
   alias Ecto.Adapters.SQL.Sandbox
   alias Ecto.Changeset
-  alias ElixirBoilerplate.Repo
+  alias QuarantineCode.Repo
 
   using do
     quote do
-      alias ElixirBoilerplate.Repo
+      alias QuarantineCode.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import ElixirBoilerplate.DataCase
+      import QuarantineCode.DataCase
     end
   end
 
